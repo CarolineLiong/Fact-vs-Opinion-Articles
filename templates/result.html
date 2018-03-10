@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Factual vs. Non-Factual</title>
+        
+		<link type= "text/css" href="{{ url_for('static', filename = 'main.css') }}" rel="stylesheet">
+    </head>
+    <body>
+        <div id="container">
+          <div id="header">
+            <h2 class="header_left">FACTUAL VS NON-FACTUAL</h2>
+            <a href="{{ url_for('index') }}"><button class="header_right">NEW SEARCH</button></a>
+          </div>
+          
+          <h1 id="result_title">{{ data }}</h1>
+          <div id="result">
+            <div class="result_left"> 
+      		  <input type="hidden" name="prob" id="prob" value={{ prob }}>
+              <div id="graph"></div>
+              <div id="label">
+              	{% if result == 0 %}
+      				<h2>NON-FACTUAL</h2>
+      			{% else %}
+      				<h2>FACTUAL</h2>
+      			{% endif %}
+              </div>
+            </div>
+            <div class="result_right">
+              {% if result == 0 %}
+      			<h3>What is Considered Non-Factual (Opinion)?</h3>
+      			<ul>
+      				<li>
+      				An opinion is defined as indicating a belief, view, sentiment, conception that cannot be proven.
+      				</li>
+      			</ul>
+      			<h3>Some Obvious Indicators of Opinion</h3>
+      			<ul>
+      				<li>Generally, it is thought</li>
+      				<li>I believe that</li>
+      				<li>It is a sad day when</li>
+      			</ul>
+      		  {% else %}
+      			<h3>What is a Fact?</h3>
+      			<ul>
+      				<li>A statement that can be proven true or false</li>
+      				<li>Anything that is done or happens</li>
+      				<li>Anything actually existent</li>
+      			</ul>
+      		  {% endif %}
+            </div>
+          </div>
+        </div>
+        <div id="footer">
+            <p class="left">CSCI 183 Winter 2018</p>
+            <p class="right" id="copyright">Copyright &copy; Caroline Lionosari, Yueqi Su, Daniel Zhang</p>
+        </div>
+    </body>
+
+    <script type="text/javascript" src="{{ url_for ('static', filename = 'node_modules/progressbar.js/dist/progressbar.js') }}" ></script>
+    <script type="text/javascript" src="{{ url_for ('static', filename = 'graph.js') }}"></script>
+</html>
