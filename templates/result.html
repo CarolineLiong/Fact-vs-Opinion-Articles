@@ -26,20 +26,21 @@
               </div>
             </div>
             <div class="result_right">
-              {% if result == 0 %}
+            {% if result == 0 %}
+            <p class="result_description"><strong>This input text is identified as nonfactual.</strong>
+            <br>If your input text has any words related to emotions (such as love and hate), the classifier is more likely to identify your text as nonfactual since sentences containing words related to emotions tend to be opinionated.
+            <br>Also, if the text contains the word “say” or “said” or any variation of the word, the classifier is more likely to classify your input as nonfactual because “say” is usually followed by opinionated statements.</p>
       			<h3>What is Considered Non-Factual (Opinion)?</h3>
       			<ul>
       				<li>
       				An opinion is defined as indicating a belief, view, sentiment, conception that cannot be proven.
       				</li>
       			</ul>
-      			<h3>Some Obvious Indicators of Opinion</h3>
-      			<ul>
-      				<li>Generally, it is thought</li>
-      				<li>I believe that</li>
-      				<li>It is a sad day when</li>
-      			</ul>
       		  {% else %}
+            <p class="result_description"><strong>This input text is identified as factual.</strong>
+            <br>Be warned, just because the input text was identified as factual, it does not mean the information you inputted was actually true. For instance, “The sky is pink.” is classified as factual. 
+            <br>If your input statement had lots of numbers, the classifier is more likely to say the text is factual since it has been trained on statistical statements, which have numbers in them and are considered to be factual. </p>
+
       			<h3>What is a Fact?</h3>
       			<ul>
       				<li>A statement that can be proven true or false</li>
