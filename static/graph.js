@@ -3,7 +3,7 @@
 
 
 var bar = new ProgressBar.Circle('#graph', {
-  color: '#000',
+  color: '#141823',
   // This has to be the same size as the maximum width to
   // prevent clipping
   strokeWidth: 8,
