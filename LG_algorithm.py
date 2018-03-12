@@ -25,7 +25,7 @@ app = Flask(__name__)
 stopWords = set(stopwords.words('english'))
 stemmer =SnowballStemmer('english')
 
-csv_file = "dataset.csv"
+csv_file = "data/dataset.csv"
 dff = pd.read_table(csv_file, sep = ',', names = ['Sentence','Tag'])
 
 #cleaning the words in the dff dataframe
