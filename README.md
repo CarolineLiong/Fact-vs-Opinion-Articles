@@ -13,6 +13,7 @@ We created this page to easily classify if a sentence, paragraph, or article is 
 ```
 $ pip install Flask
 ```
+Note: It is recommended that Flask should be installed on Python 2.7
 
 #### Install progressbar.js
 Using bower 
