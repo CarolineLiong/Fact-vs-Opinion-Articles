@@ -15,6 +15,11 @@ $ pip install Flask
 ```
 
 #### Install progressbar.js
+Using bower 
+```
+$bower install progressbar.js
+```
+Using npm
 ```
 $ npm install progressbar.js
 ```
