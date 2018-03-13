@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Factual vs. Non-Factual</title>
+        <title>Opinion Vs. Fact</title>
         
         <link type= "text/css" href="{{ url_for('static', filename = 'main.css') }}" rel="stylesheet">
     </head>
     <body>
         <div id="container">
-            <h1 id="index_header">FACTUAL VS NON-FACTUAL</h1>
+            <h1 id="index_header">OPINION VS FACT</h1>
             <p>Find out whether an article is fact-based or opinion-based</p>
             <br>
             <form action="http://127.0.0.1:5000/result" method="POST">
@@ -17,12 +17,12 @@
             <br>
             <div id="description">
                 <h3>HOW IT WORKS?</h3>
-                <p>We created this page to easily classify if a sentence, paragraph, or article is factual or non-factual (along with with the percentage of the classifier being accurate).  This page is made using the Logistic Regression that had been trained on 99 older news articles with sentences classified as factual or nonfactual. Due to this training process, we recommend that you only enter sentences rather than whole articles for more accurate results.</p>
+                <p>We created this page to easily classify if a sentence, paragraph, or article is factual or opinionated (along with with the percentage of the classifier being accurate).  This page is made using the Logistic Regression that had been trained on 99 older news articles with sentences classified as factual or nonfactual. Due to this training process, we recommend that you only enter sentences rather than whole articles for more accurate results.</p>
             </div>
         </div>
         <div id="footer">
             <p class="left">CSCI 183 Winter 2018</p>
-            <p class="right" id="copyright">Copyright &copy; Caroline Lionosari, Yueqi Su, Daniel Zhang</p>
+            <p class="right" id="copyright">Copyright &copy; Caroline Liongosari, Yueqi Su, Daniel Zhang</p>
         </div>
     </body>
 </html>

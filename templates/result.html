@@ -1,14 +1,14 @@
 <!doctype html>
 <html>
     <head>
-        <title>Factual vs. Non-Factual</title>
+        <title>Opinion Vs. Fact</title>
         
 		<link type= "text/css" href="{{ url_for('static', filename = 'main.css') }}" rel="stylesheet">
     </head>
     <body>
         <div id="container">
           <div id="header">
-            <h2 class="header_left">FACTUAL VS NON-FACTUAL</h2>
+            <h2 class="header_left">OPINION VS FACT</h2>
             <a href="{{ url_for('index') }}"><button class="header_right">NEW SEARCH</button></a>
           </div>
           
@@ -19,7 +19,7 @@
               <div id="graph"></div>
               <div id="label">
               	{% if result == 0 %}
-      				<h2>NON-FACTUAL</h2>
+      				<h2>OPINION</h2>
       			{% else %}
       				<h2>FACTUAL</h2>
       			{% endif %}
@@ -27,10 +27,10 @@
             </div>
             <div class="result_right">
             {% if result == 0 %}
-            <p class="result_description"><strong>This input text is identified as nonfactual.</strong>
-            <br>If your input text has any words related to emotions (such as love and hate), the classifier is more likely to identify your text as nonfactual since sentences containing words related to emotions tend to be opinionated.
+            <p class="result_description"><strong>This input text is identified as opinionated.</strong>
+            <br>If your input text has any words related to emotions (such as love and hate), the classifier is more likely to identify your text as opinion since sentences containing words related to emotions tend to be opinionated.
             <br>Also, if the text contains the word “say” or “said” or any variation of the word, the classifier is more likely to classify your input as nonfactual because “say” is usually followed by opinionated statements.</p>
-      			<h3>What is Considered Non-Factual (Opinion)?</h3>
+      			<h3>What is an Opinion?</h3>
       			<ul>
       				<li>
       				An opinion is defined as indicating a belief, view, sentiment, conception that cannot be proven.
@@ -53,7 +53,7 @@
         </div>
         <div id="footer">
             <p class="left">CSCI 183 Winter 2018</p>
-            <p class="right" id="copyright">Copyright &copy; Caroline Lionosari, Yueqi Su, Daniel Zhang</p>
+            <p class="right" id="copyright">Copyright &copy; Caroline Liongosari, Yueqi Su, Daniel Zhang</p>
         </div>
     </body>
 
