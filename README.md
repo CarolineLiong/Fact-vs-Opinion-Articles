@@ -20,7 +20,7 @@ $ npm install progressbar.js
 ```
 or download the static/node_modules folder
 
-## Compile
+## Compile UI
 ```
 $ python LG_algorithm.py
 ```
